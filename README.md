@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+# Reto Rimac 2024
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Librerías utilizadas:
 
-Currently, two official plugins are available:
+  - Redux: Se utilizó como manejador de estado general en la aplocación
+  - Jest: Se utilizó como libreria de testing
+  - Testing Library React
+  - React Router Dom: Enrutador para las diferentes pantallas
+  - React Hook Form: Manejador de formularios para react que facilita el manejo de dichos formularios y eventos
+  - Sass: Preprocesador utilizado tal como se indica en las indicaciones
+  - Swiper: Librería que se utilizó para el Slider de los planes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Resumen de como se abordó el proyecto:
 
-## Expanding the ESLint configuration
+  - Para la creación de los componentes se utilizó Atom design ya que facilita el orden de los componentes clasificados por su tamaño y/o funcionalidades
+  - Se creo un layout para el steper
+  - Se dividió las paginas del proyectos según las pantallas requeridas.
+    Mas detalle en el proyecto del repositorio
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Pasos para ejecutar el proyecto:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+  - Ejecutar los siguientes comandos:
+    ```console
+      npm i
+    ```
+     ```console
+      npm run dev
+    ```
