@@ -1,0 +1,50 @@
+@import "../../assets/styles/utils/mixins";
+
+.container-children {
+    background-color: var(--neutral-100);
+    min-height: calc(100vh - 112px);
+
+    @include sm-bk {
+        min-height: calc(100vh - 120px);
+    }
+
+}
+
+.container-steps {
+    background-color: var(--neutral-100);
+    @include sm-bk {
+        background-color: var(--neutral-200);
+    }
+}
+
+.container-stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    border-bottom: 1px solid var(--neutral-400);
+
+    @include sm-bk {
+        border-bottom: none;
+    }
+
+    &__normal {
+        display: none;
+
+        @include sm-bk {
+            display: block;
+        }
+    }
+
+    &__mobile {
+        width: 100%;
+        padding: 0 1em;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        @include sm-bk {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+$sm: 601px;
+$lg: 950px;
+
+@mixin sm-bk {
+    @media screen and (min-width: $sm) {
+        @content;
+    }
+}
+
+@mixin lg-bk {
+    @media screen and (min-width: $lg) {
+        @content;
+    }
+}

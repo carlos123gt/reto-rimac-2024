@@ -1,0 +1,39 @@
+@import "../../../assets/styles/utils/mixins";
+
+.button-back {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--neutral-500);
+    cursor: pointer;
+
+    @include sm-bk {
+        color: var(--blue-berry);
+    }
+
+    &__circle {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 2px solid var(--neutral-500);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include sm-bk {
+            border: 2px solid var(--blue-berry);
+        }
+    }
+
+    &__text {
+        display: none;
+
+        @include sm-bk {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.4px;
+        }
+    }
+}
