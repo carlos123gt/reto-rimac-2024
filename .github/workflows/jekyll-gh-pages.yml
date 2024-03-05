@@ -13,11 +13,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-        with:
-          repository: 'input-output-hk/cardano-node'
-      - name: delete all
-        run: | 
-          rm -rf ** && find . -name . -o -prune -exec rm -rf -- {} +
+
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
