@@ -75,6 +75,9 @@ const FormInformation = () => {
         <Input
           {...register("dni", { required: true })}
           border={false}
+          typeInput="number"
+          minProp={8}
+          maxProp={8}
           label="Nro. de documento"
         />
       </div>
@@ -82,6 +85,9 @@ const FormInformation = () => {
       <div className="form-container-input">
         <Input
           {...register("phoneNumber", { required: true })}
+          typeInput="tel"
+          minProp={9}
+          maxProp={9}
           label="Celular"
         />
         {errors.phoneNumber ? <p className="error">Requerido</p> : null}

@@ -6,10 +6,13 @@ interface Props {
   label: string;
   border?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  typeInput?: string;
+  maxProp?: number;
+  minProp?: number;
 }
 
 const Input: FC<Props> = React.forwardRef<HTMLInputElement, Props>(
-  ({ label, onChange, border = true, ...props }, ref) => {
+  ({ typeInput, maxProp, minProp, label, onChange, border = true, ...props }, ref) => {
     return (
       <div
         className={classNames(
@@ -22,6 +25,9 @@ const Input: FC<Props> = React.forwardRef<HTMLInputElement, Props>(
           ref={ref}
           className="container-input__input"
           onChange={onChange}
+          type={typeInput}
+          maxLength={maxProp}
+          minLength={minProp}
           {...props}
         />
       </div>
