@@ -21,6 +21,7 @@ const StepperMobile: FC<Props> = ({ currentStep, steps }) => {
           style={{
             width: `${percentageProgress}%`,
           }}
+          data-testid="progress-bar"
         />
       </div>
     </div>

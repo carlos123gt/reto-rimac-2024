@@ -22,6 +22,7 @@ interface Props {
 }
 
 const SliderPlans: FC<Props> = ({ plans, typeOption }) => {
+  console.log(typeOption)
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const [sliderBegOrNot, handleSliderByState] = useState({

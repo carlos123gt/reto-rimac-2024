@@ -1,14 +1,15 @@
-import React from "react";
+import { FC, forwardRef } from "react";
 import "./style.scss";
 
 interface Props {
   checked?: boolean;
+  defaultChecked?: boolean;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onChange?: (e: any) => void;
 }
 
-const CheckBox = React.forwardRef<HTMLInputElement, Props>(
-  ({ checked, onChange, ...props }, ref) => {
+const CheckBox: FC<Props> = forwardRef<HTMLInputElement, Props>(
+  ({ defaultChecked, checked, onChange, ...props }, ref) => {
     return (
       <input
         ref={ref}
@@ -16,6 +17,7 @@ const CheckBox = React.forwardRef<HTMLInputElement, Props>(
         checked={checked}
         className="checkbox"
         type="checkbox"
+        defaultChecked={defaultChecked}
         {...props}
       />
     );

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC, forwardRef } from "react";
 import "./styles.scss";
 import { classNames } from "../../../utils/util";
 
@@ -11,7 +11,7 @@ interface Props {
   minProp?: number;
 }
 
-const Input: FC<Props> = React.forwardRef<HTMLInputElement, Props>(
+const Input: FC<Props> = forwardRef<HTMLInputElement, Props>(
   ({ typeInput, maxProp, minProp, label, onChange, border = true, ...props }, ref) => {
     return (
       <div
@@ -22,6 +22,7 @@ const Input: FC<Props> = React.forwardRef<HTMLInputElement, Props>(
       >
         <label className="container-input__label">{label}</label>
         <input
+          data-testid="custom-id"
           ref={ref}
           className="container-input__input"
           onChange={onChange}
